@@ -21,7 +21,7 @@ client.on('messageCreate', async message => {
 	let command = args.shift().toLowerCase() // Getting the command from args
 	let cmd;
 	if (client.commands.has(command)) cmd = client.commands.get(command) // Checking if typed command is exists
-	if (cmd) cmd.run(client, message, args) // Running the command if it is exists
+	if (cmd && cmd.info.enabled) cmd.run(client, message, args) // Running the command if it is exists
 })
 
 client.on('ready', () => console.log('Bot is ready!')) // Ready Event
