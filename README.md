@@ -22,7 +22,7 @@ A free bot template coded using Eris libary.
 
 ### How to make new commands
 
-In '/commands' there is a 'example.js' command file.
+In '/commands/' there is a 'example.js' command file.
 
 ```js
 exports.run = (client, message, args) => {
